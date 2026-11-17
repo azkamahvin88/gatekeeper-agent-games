@@ -1,0 +1,7 @@
+node_modules/
+.env
+state/
+proof_*.json
+*.wtns
+*.log
+.DS_Store
