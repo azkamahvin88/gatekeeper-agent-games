@@ -1,0 +1,14 @@
+# Cloudflare Pages + D1 tunnel untuk Proof Gatekeeper agent (zkVerify Agent Games).
+# D1 database_id DIISI setelah `wrangler d1 create gatekeeper-state` (butuh login Cloudflare).
+name = "gatekeeper-agent-games"
+compatibility_date = "2026-09-27"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "gatekeeper-state"
+database_id = "ec56b929-f853-4271-a94e-47c127004767"
+
+# Secrets (set via `wrangler pages secret put <NAMA>` setelah deploy — JANGAN tulis nilainya di file ini):
+#   TUNNEL_KEY  (wajib) — isi file ~/.gatekeeper-tunnel-key
+#   HEALTH_KEY  (disarankan) — isi file ~/.gatekeeper-health-key
